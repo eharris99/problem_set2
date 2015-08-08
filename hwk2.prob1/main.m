@@ -9,9 +9,16 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
-    return 0;
+            @autoreleasepool {
+                NSString *text = @"Hi hello how is it going";
+                NSArray *words = [text componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                NSInteger wordCount = [words count];
+                NSLog(@"The number of words is %ld", (long)wordCount);
+                
+            }
+            
+            
+            
+            return 0;
+        
 }
