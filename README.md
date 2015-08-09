@@ -3,6 +3,7 @@
 #first is method wordCount for imaginary class Phrase
 
 #second is method vowelCount for imaginary class Phrase
+## both log correct results when code is used with phrase "hi how are you" in main.m's autoreleasepool
 
 ```
 
