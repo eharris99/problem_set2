@@ -1,4 +1,40 @@
-#the folder won't let me push problem 3 so here is the code
+# problem_set2 answers
+
+## problems one and two: these methods log correct results when code is used on phrase "hi how are you" in main.m's autoreleasepool; problem three logs correct area for sphere in main.m
+
+#first is method wordCount for imaginary class Phrase
+
+
+```
+
+-(void)wordCount(Phrase*)phrase {
+NSArray *words = [phrase componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+NSInteger wordCount = [words count];
+NSLog(@"The number of words is %ld", wordCount);
+}
+
+```
+#second is method vowelCount for imaginary class Phrase
+
+````
+
+-(void)vowelCount(Phrase*)phrase {
+
+NSMutableArray *array = [@[] mutableCopy];
+
+[phrase enumerateSubstringsInRange:NSMakeRange(0, [phrase length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+[array addObject:substring];
+}] ;
+NSCountedSet *set = [[NSCountedSet alloc] initWithArray:array];
+
+for (NSString *nucleobase in @[@"a", @"e", @"i", @"o",@"u"]){
+NSUInteger vowelCount =  [set countForObject:nucleobase];
+NSLog(@"%@: %lu", nucleobase, (unsigned long)vowelCount);
+
+}
+
+```
+#github won't let me push problem 3 so here is the code
 
 ## main.m
 
