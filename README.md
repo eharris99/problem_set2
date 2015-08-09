@@ -1,9 +1,14 @@
 # problem_set2
+
+#first is method wordCount for imaginary class Phrase
+
+#second is method vowelCount for imaginary class Phrase
+
 ```
 
 #import <Foundation/Foundation.h>
 
-#this is method wordCount for imaginary class Phrase
+
 
 -(void)wordCount(Phrase*)phrase {
 NSArray *words = [phrase componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -11,7 +16,7 @@ NSInteger wordCount = [words count];
 NSLog(@"The number of words is %ld", wordCount);
 }
 
-#this is method vowelCount for imaginary class Phrase
+
 
 -(void)vowelCount(Phrase*)phrase {
 
